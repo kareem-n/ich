@@ -2,14 +2,27 @@
   --main-theme-color: #0b4d8c;
 }
 
-body {
-  height: 200vh;
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: #000;
 }
 
-a {
-    text-decoration: none;
-    display: inline-block;
-    color: #000;
+.navbar.fixed-nav {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  animation: slideDown 0.5s ease-in-out;
+  -webkit-animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .main-bg-color {
@@ -63,7 +76,7 @@ select {
 }
 
 .pointer {
-    cursor: pointer !important;
+  cursor: pointer !important;
 }
 
 .card-title {
@@ -71,45 +84,58 @@ select {
 }
 
 .mitra-item:hover {
-    background-color: rgb(240, 240, 240);
+  background-color: rgb(240, 240, 240);
 }
 
 .lightBox {
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 99;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99;
 }
 
 .lightBox .item {
-    width: 500px;
+  width: 500px;
 }
 
 .section-gray-color {
-    background-color: rgb(235, 235, 235);
+  background-color: rgb(235, 235, 235);
 }
 
 .owl-nav {
-    text-align: center;
+  text-align: center;
 }
 
-.owl-prev ,.owl-next {
-    font-size: 3rem !important;
-    margin: 0 10px ;
+.owl-prev,
+.owl-next {
+  font-size: 3rem !important;
+  margin: 0 10px;
 }
 
 .state-item:hover {
-    background-color: red;
+  background-color: red;
 }
 
 .lnk:hover {
-    color: var(--main-theme-color);
-    cursor: pointer;
+  color: var(--main-theme-color);
+  cursor: pointer;
 }
 
-
 .fa-facebook {
-    color: #5D82D1;
+  color: #5d82d1;
 }
 
 .fa-youtube {
-    color: rgb(249, 80, 65) ;
+  color: rgb(249, 80, 65);
+}
+
+
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.452);
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
 }

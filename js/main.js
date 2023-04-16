@@ -4,6 +4,22 @@ let lightBox = document.querySelector(".lightBox");
 let lightItemClose = document.getElementById("lightItemClose");
 
 let arrowUp = document.getElementById("arrowUp");
+
+let navlinks = document.querySelectorAll("#navlinks li") ;
+
+console.log(navlinks);
+
+let navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", function () {
+  if (this.scrollY > 150) {
+    navbar.classList.add("fixed-nav");
+  } else {
+    navbar.classList.remove("fixed-nav");
+  }
+  console.log(this.scrollY);
+});
+
 console.log(arrowUp);
 
 arrowUp.addEventListener("click", function () {

@@ -14,57 +14,33 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav
-      class="navbar navbar-expand-lg main-bg-color sticky-top navbar-light bg-light"
-    >
-      <div class="container-fluid py-1">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#"
-                >Call Center: (021) 7219000</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">
-                IGD 24 Jam: (021) 7219214</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">
-                SPGDT IGD: 0815 9091429</a
-              >
-            </li>
-          </ul>
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#"
-                ><i class="fab h5 fa-facebook"></i
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#"
-                ><i class="fab h5 fa-instagram"></i
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#"
-                ><i class="fab h5 fa-youtube"></i
-              ></a>
-            </li>
-            <li class="nav-item">
-              <img src="assest/tombol-mccn.png" class="tompol" alt="" />
-            </li>
-          </ul>
+
+    <div class="d-none d-lg-block main-bg-color text-white py-3">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <ul class="list-unstyled d-flex m-0">
+          <li class="fw-bold">Call Center: (021) 7219000</li>
+          <li class="fw-bold mx-4">IGD 24 Jam: (021) 7219214</li>
+          <li class="fw-bold">SPGDT IGD: 0815 9091429</li>
+        </ul>
+
+        <div class="d-flex align-items-center">
+          <div class="me-3">
+              <i class="fab h4 fa-facebook"></i>
+              <i class="fab h4 mx-3 fa-youtube"></i>
+              <i class="fab h4 fa-instagram"></i>
+          </div>
+          <img src="assest/tombol-mccn.png" class="tompol" alt="">
         </div>
       </div>
-    </nav>
+      
+    </div>
 
     <nav
-      class="navbar main-navbar navbar-expand-lg sticky-top navbar-light bg-light"
+    style="z-index: 999;"
+      class="navbar main-navbar navbar-expand-lg navbar-light bg-light"
     >
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <img src="assest/logo-rspp.png" class="w-100" alt="" />
         </a>
         <button
@@ -81,12 +57,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
+              <a class="nav-link active" aria-current="page" href="index.html">
                 <i class="fas fa-home"></i>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">health information library</a>
+              <a class="nav-link" href="pages/mchil.html">health information library</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -100,16 +76,16 @@
                 profile
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Tentang Kami</a></li>
-                <li><a class="dropdown-item" href="#">Mutu Layanan</a></li>
+                <li><a class="dropdown-item" href="pages/tentang-kami.html">Tentang Kami</a></li>
+                <li><a class="dropdown-item" href="pages/mutu.html">Mutu Layanan</a></li>
                 <li>
-                  <a class="dropdown-item" href="#">Pencapaian Kami</a>
+                  <a class="dropdown-item" href="pages/pencapaian.html">Pencapaian Kami</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">Profil Manajemen</a>
+                  <a class="dropdown-item" href="pages/manajemen.html">Profil Manajemen</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">Mitra Kami</a>
+                  <a class="dropdown-item" href="pages/mitra_kami.html">Mitra Kami</a>
                 </li>
               </ul>
             </li>
@@ -125,11 +101,11 @@
                 layanan
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Rawat Jalan</a></li>
-                <li><a class="dropdown-item" href="#">Rawat Inap</a></li>
-                <li><a class="dropdown-item" href="#">Penunjang Medis</a></li>
-                <li><a class="dropdown-item" href="#">Fasilitas Publik</a></li>
-                <li><a class="dropdown-item" href="#">Medical Checkup</a></li>
+                <li><a class="dropdown-item" href="pages/rawat_jalan.html">Rawat Jalan</a></li>
+                <li><a class="dropdown-item" href="pages/rawat_inap.html">Rawat Inap</a></li>
+                <li><a class="dropdown-item" href="pages/penunjang_medis.html">Penunjang Medis</a></li>
+                <li><a class="dropdown-item" href="pages/fasilitas.html">Fasilitas Publik</a></li>
+                <li><a class="dropdown-item" href="pages/mcu.html">Medical Checkup</a></li>
                 <li><a class="dropdown-item" href="#">Promo Kesehatan</a></li>
                 <li>
                   <a class="dropdown-item" href="#"
@@ -155,17 +131,17 @@
                 centre of excellence
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">cancer center</a></li>
+                <li><a class="dropdown-item" href="pages/centre-cancer.html">cancer center</a></li>
                 <li>
-                  <a class="dropdown-item" href="#">Cardioneurovascular</a>
+                  <a class="dropdown-item" href="pages/cardioneuro-vascular.html">Cardioneurovascular</a>
                 </li>
-                <li><a class="dropdown-item" href="#">Burn Unit</a></li>
-                <li><a class="dropdown-item" href="#">Geriatric</a></li>
+                <li><a class="dropdown-item" href="pages/burn.html">Burn Unit</a></li>
+                <li><a class="dropdown-item" href="pages/geriatri.html">Geriatric</a></li>
                 <li>
-                  <a class="dropdown-item" href="#">Minimal Invasive Surgery</a>
+                  <a class="dropdown-item" href="pages/bedah-minimal-invasif.html">Minimal Invasive Surgery</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">External Hospital Care</a>
+                  <a class="dropdown-item" href="pages/external-hospital-care.html">External Hospital Care</a>
                 </li>
               </ul>
             </li>
@@ -231,14 +207,17 @@
       </ul>
     </div>
 
-    <div id="arrowUp" class="main-bg-color pointer opacity-75 text-white position-fixed bottom-0 end-0 py-2 px-3 mb-4 me-3 rounded-pill">
+    <div
+      id="arrowUp"
+      class="main-bg-color pointer opacity-75 position-fixed text-white shadow-lg bottom-0 end-0 py-2 px-3 mb-4 me-3 rounded-pill"
+    >
       <i class="fa-solid fa-chevron-up"></i>
     </div>
 
     <header>
       <div class="container-fluid">
-        <div class="row align-items-center">
-          <div class="col-md-8">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-8">
             <div
               id="carouselExampleIndicators"
               class="carousel slide"
@@ -341,11 +320,11 @@
               </button>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="shadow-lg p-5">
+          <div class="col-lg-4">
+            <div class="shadow-lg p-lg-5 p-3">
               <div class="text-center">
                 <h2 class="mb-3 main-color">cari jadwal dokter</h2>
-                <p class="px-4 text-success">
+                <p class="text-success">
                   Temukan jadwal dokter, booking atau buat janji dengan dokter
                   ahli, spesialis atau umum yang berpengalaman
                 </p>
@@ -604,9 +583,9 @@
         <div class="ln"></div>
       </h2>
       <div class="container mt-5">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="card text-center" style="width: 18rem">
+        <div class="row gy-4">
+          <div class="col-12 col-lg-3">
+            <div class="card text-center" style="width: 100%">
               <img src="assest/d2.jpg" class="card-img-top" alt="..." />
               <div class="card-body px-2">
                 <h5 class="card-title main-color">dr. Rosita Muthalib</h5>
@@ -617,8 +596,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card text-center" style="width: 18rem">
+          <div class="col-lg-3">
+            <div class="card text-center" style="width: 100%">
               <img src="assest/d1.jpg" class="card-img-top" alt="..." />
               <div class="card-body px-2">
                 <h5 class="card-title main-color">
@@ -631,8 +610,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card text-center" style="width: 18rem">
+          <div class="col-lg-3">
+            <div class="card text-center" style="width: 100%">
               <img src="assest/d3.jpg" class="card-img-top" alt="..." />
               <div class="card-body px-2">
                 <h5 class="card-title main-color">
@@ -647,8 +626,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card text-center" style="width: 18rem">
+          <div class="col-lg-3">
+            <div class="card text-center" style="width: 100%">
               <img src="assest/d4.jpg" class="card-img-top" alt="..." />
               <div class="card-body px-2">
                 <h5 class="card-title main-color">
@@ -674,7 +653,7 @@
           Mitra Kami
         </h1>
         <div class="row gy-3 mt-4">
-          <div class="col-md-2 mitra-item p-1 offset-1">
+          <div class="col-md-2 mitra-item p-1 offset-lg-1">
             <a class="" href="#">
               <img
                 src="assest/img_070920221662520968C8R2Y.png"
@@ -720,7 +699,7 @@
             </a>
           </div>
 
-          <div class="col-md-2 offset-1 mitra-item p-1">
+          <div class="col-md-2 offset-lg-1 mitra-item p-1">
             <a class="" href="#">
               <img
                 src="assest/img_0709202216625216668PTEM.png"
@@ -795,7 +774,7 @@
           <div class="ln"></div>
           Promo Saat Ini
         </h1>
-        <div class="row mt-4 justify-content-center">
+        <div class="row gy-5 mt-4 justify-content-center">
           <div class="col-md-3">
             <img
               src="assest/img_120420231681274477SQY4O.png"
@@ -934,7 +913,7 @@
 
     <section class="py-5 main-bg-color">
       <div class="container">
-        <div class="row">
+        <div class="row gy-4">
           <div class="col-md-3">
             <div class="state-item bg-warning text-center py-4 rounded-2">
               <h3>51 Tahun</h3>
