@@ -9,9 +9,26 @@ let navlinks = document.querySelectorAll("#navlinks li");
 
 let medicalMenu = document.querySelector("#src_spesialis");
 let doctorMenu = document.querySelector("#src_dokter");
-let medicalResponse = [];
-console.log(medicalMenu);
 
+let jadalBtn = document.getElementById("jadwal");
+let query = "";
+jadalBtn.addEventListener("click", function () {
+  searchJadwal();
+});
+
+console.log(0);
+
+async function searchJadwal() {
+  let response = await fetch("http://api4test.my.id:5000/api/v1/opensql", {
+    method: "POST",
+    body: `SELECT * from tbl_d_jadwal_praktek as a inner join tb_employee as b on a.kode_dokter=b.id_emp where kode_pegawai_group='NAKES'and b.nama='${doctorMenu.value}'`,
+  });
+  response = await response.json();
+  localStorage.setItem("doctor", JSON.stringify(response));
+  window.location.href = `pages/doctor_detail.html`;
+}
+
+let medicalResponse = [];
 
 async function fetchData(q, element) {
   let response = await fetch("http://api4test.my.id:5000/api/v1/opensql", {
@@ -20,31 +37,30 @@ async function fetchData(q, element) {
   });
   response = await response.json();
   medicalResponse = response;
-  display(medicalResponse , element);
+  display(medicalResponse, element);
 }
 // medical services
-let query = `SELECT kode, nama from tbl_poli` ;
-fetchData(query , medicalMenu);
+query = `SELECT kode, nama from tbl_poli`;
+fetchData(query, medicalMenu);
 
-query = `SELECT * from tb_employee where kode_pegawai_group = 'NAKES'` ;
-fetchData(query , doctorMenu ) ;
+query = `SELECT * from tb_employee where kode_pegawai_group = 'NAKES'`;
+fetchData(query, doctorMenu);
 
-
-function display(arr , element) {
+function display(arr, element) {
   let temp = ``;
 
   for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i].nama);
     temp += `
     <option
-          value="0"
+
+          value="${arr[i].nama}"
           selected=""
           data-select2-id="select2-data-5-qw63"
         >
         ${arr[i].nama}
-</option>`;
+    </option>`;
   }
-  element.innerHTML = temp ; 
+  element.innerHTML = temp;
 }
 
 let navbar = document.querySelector(".navbar");
